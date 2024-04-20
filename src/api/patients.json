@@ -1,0 +1,137 @@
+[
+  {
+    "id": 123456,
+    "patient": "Juan Perez",
+    "identification_type": "CC",
+    "identification": 123456789,
+    "phone": 1234567890,
+    "eps": "EPS SaludTotal",
+    "status": "stable"
+  },
+  {
+    "id": 234567,
+    "patient": "Maria Lopez",
+    "identification_type": "TI",
+    "identification": 987654321,
+    "phone": 9876543210,
+    "eps": "EPS Sura",
+    "status": "moderate"
+  },
+  {
+    "id": 345678,
+    "patient": "Carlos Ramirez",
+    "identification_type": "CC",
+    "identification": 456789123,
+    "phone": 4567891230,
+    "eps": "EPS Sanitas",
+    "status": "critical"
+  },
+  {
+    "id": 456789,
+    "patient": "Ana Martinez",
+    "identification_type": "RC",
+    "identification": 789123456,
+    "phone": 7891234560,
+    "eps": "Particular",
+    "status": "stable"
+  },
+  {
+    "id": 567890,
+    "patient": "Luisa Garcia",
+    "identification_type": "CC",
+    "identification": 987654321,
+    "phone": 9876543210,
+    "eps": "EPS Sura",
+    "status": "moderate"
+  },
+  {
+    "id": 678901,
+    "patient": "Pedro Rodriguez",
+    "identification_type": "CE",
+    "identification": 654321987,
+    "phone": 6543219870,
+    "eps": "EPS Compensar",
+    "status": "stable"
+  },
+  {
+    "id": 789012,
+    "patient": "Sofia Perez",
+    "identification_type": "CC",
+    "identification": 321987654,
+    "phone": 3219876540,
+    "eps": "Particular",
+    "status": "critical"
+  },
+  {
+    "id": 890123,
+    "patient": "Laura Gomez",
+    "identification_type": "CC",
+    "identification": 159753852,
+    "phone": 1597538520,
+    "eps": "EPS SaludCoop",
+    "status": "moderate"
+  },
+  {
+    "id": 901234,
+    "patient": "Andres Gonzalez",
+    "identification_type": "CC",
+    "identification": 852369741,
+    "phone": 8523697410,
+    "eps": "Particular",
+    "status": "stable"
+  },
+  {
+    "id": 101112,
+    "patient": "Paola Hernandez",
+    "identification_type": "CC",
+    "identification": 456123789,
+    "phone": 4561237890,
+    "eps": "EPS Sanitas",
+    "status": "moderate"
+  },
+  {
+    "id": 111213,
+    "patient": "David Alvarez",
+    "identification_type": "CC",
+    "identification": 753951852,
+    "phone": 7539518520,
+    "eps": "EPS Compensar",
+    "status": "critical"
+  },
+  {
+    "id": 121314,
+    "patient": "Gabriela Castro",
+    "identification_type": "TI",
+    "identification": 147258369,
+    "phone": 1472583690,
+    "eps": "EPS Famisanar",
+    "status": "stable"
+  },
+  {
+    "id": 131415,
+    "patient": "Fernando Perez",
+    "identification_type": "CC",
+    "identification": 369852147,
+    "phone": 3698521470,
+    "eps": "Particular",
+    "status": "moderate"
+  },
+  {
+    "id": 141516,
+    "patient": "Camila Lopez",
+    "identification_type": "CC",
+    "identification": 258369741,
+    "phone": 2583697410,
+    "eps": "EPS SaludTotal",
+    "status": "stable"
+  },
+  {
+    "id": 151617,
+    "patient": "Diego Ramirez",
+    "identification_type": "CC",
+    "identification": 147258369,
+    "phone": 1472583690,
+    "eps": "EPS Sura",
+    "status": "critical"
+  }
+]

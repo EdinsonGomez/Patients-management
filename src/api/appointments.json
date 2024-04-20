@@ -1,0 +1,92 @@
+[
+  {
+    "patient": 123456,
+    "last_attention": "2024-04-15T10:30:00Z",
+    "appointment_type": "Medical appointment",
+    "observations": "El paciente se mostró tranquilo y relajado durante la consulta."
+  },
+  {
+    "patient": 234567,
+    "last_attention": "2024-04-14T09:45:00Z",
+    "appointment_type": "Medical appointment",
+    "observations": "Se notó un ligero aumento en la ansiedad del paciente durante la consulta."
+  },
+  {
+    "patient": 345678,
+    "last_attention": "2024-04-14T14:15:00Z",
+    "appointment_type": "Medical appointment",
+    "observations": "El paciente manifestó síntomas graves y requiere atención inmediata."
+  },
+  {
+    "patient": 456789,
+    "last_attention": "2024-04-13T11:00:00Z",
+    "appointment_type": "Medical appointment",
+    "observations": "El paciente mostró mejoría en comparación con la última visita."
+  },
+  {
+    "patient": 567890,
+    "last_attention": "2024-04-12T15:30:00Z",
+    "appointment_type": "Medical appointment",
+    "observations": "Se observó un leve empeoramiento en la condición del paciente."
+  },
+  {
+    "patient": 678901,
+    "last_attention": "2024-04-11T16:45:00Z",
+    "appointment_type": "Medical appointment",
+    "observations": "El paciente está respondiendo bien al tratamiento."
+  },
+  {
+    "patient": 789012,
+    "last_attention": "2024-04-10T13:20:00Z",
+    "appointment_type": "Medical appointment",
+    "observations": "Se detectaron signos de deterioro en la salud del paciente."
+  },
+  {
+    "patient": 890123,
+    "last_attention": "2024-04-09T10:10:00Z",
+    "appointment_type": "Medical appointment",
+    "observations": "El paciente sigue presentando síntomas moderados."
+  },
+  {
+    "patient": 901234,
+    "last_attention": "2024-04-08T11:45:00Z",
+    "appointment_type": "Medical appointment",
+    "observations": "El paciente está en condiciones estables en este momento."
+  },
+  {
+    "patient": 101112,
+    "last_attention": "2024-04-07T14:00:00Z",
+    "appointment_type": "Medical appointment",
+    "observations": "Se observaron mejoras significativas en la salud del paciente."
+  },
+  {
+    "patient": 111213,
+    "last_attention": "2024-04-06T12:30:00Z",
+    "appointment_type": "Medical appointment",
+    "observations": "La condición del paciente empeoró desde la última consulta."
+  },
+  {
+    "patient": 121314,
+    "last_attention": "2024-04-05T09:20:00Z",
+    "appointment_type": "Medical appointment",
+    "observations": "El paciente mostró estabilidad en su condición de salud."
+  },
+  {
+    "patient": 131415,
+    "last_attention": "2024-04-04T15:00:00Z",
+    "appointment_type": "Medical appointment",
+    "observations": "El paciente parece estar respondiendo positivamente al tratamiento."
+  },
+  {
+    "patient": 141516,
+    "last_attention": "2024-04-03T16:40:00Z",
+    "appointment_type": "Medical appointment",
+    "observations": "Se observaron fluctuaciones en el estado de ánimo del paciente."
+  },
+  {
+    "patient": 151617,
+    "last_attention": "2024-04-02T11:15:00Z",
+    "appointment_type": "Medical appointment",
+    "observations": "La situación del paciente es crítica y necesita atención urgente."
+  }
+]
