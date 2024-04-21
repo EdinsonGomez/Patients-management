@@ -1,4 +1,4 @@
-import BodyCell from "../molecules/table/BodyCell"
+import BodyCell from "@/components/molecules/table/BodyCell";
 
 const columns = [
   { key: 'id', head: 'ID', type: 'text' },
