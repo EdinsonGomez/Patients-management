@@ -1,6 +1,8 @@
+import HomePage from '@/components/pages/Home';
+
 function App() {
   return (
-    <h3>Mi app</h3>
+    <HomePage />
   )
 }
 
