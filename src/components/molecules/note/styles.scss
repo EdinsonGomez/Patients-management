@@ -1,0 +1,35 @@
+@import '@/styles/variables.scss';
+
+.note {
+  width: 100%;
+  
+  &__header {
+    display: flex;
+    margin-top: 24px;
+  }
+
+  &__doctor {
+    flex-grow: 1;
+    font-weight: 700;
+    font-size: 16px;
+    color: $color-primary-darker;
+  }
+
+  &__speciality {
+    margin-top: 4px;
+    color: $color-neutral-dark-2;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  &__remove-icon {
+    color: $color-red-3;
+  }
+
+  &__observation {
+    margin-top: 1rem;
+    font-weight: 400;
+    font-size: 16px;
+    color: $color-neutral-dark-2;
+  }
+}

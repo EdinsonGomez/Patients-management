@@ -42,7 +42,9 @@ function PatientInfo() {
     setObservation(target.value);
   };
 
-  const onCheckIn = () => {
+  const onCheckIn = (e) => {
+    e.preventDefault();
+  
     const speciality = userData.speciality.toLowerCase().replace(' ', '_');
     const appointment_type = appointments_types[speciality];
 
@@ -69,7 +71,9 @@ function PatientInfo() {
         setNotes([
           ...notes,
           noteData,
-        ])
+        ]);
+
+        setObservation('');
       })
 
   }
@@ -101,23 +105,25 @@ function PatientInfo() {
           onConfirmChange={onUpdateField(conf.key)}
         />
       ))}
-      <FormControl
-        htmlFor="observation"
-        label="Agregar Observación"
-        className="info__item--full"
-      >
-        <Textarea
-          id="observation"
-          placeholder="Observación"
-          rows={9}
-          value={observation}
-          onChange={onChange}
-        />
-      </FormControl>
+      <form className="info__item--full" onSubmit={onCheckIn}>
+        <FormControl
+          htmlFor="observation"
+          label="Agregar Observación"
+        >
+          <Textarea
+            id="observation"
+            placeholder="Observación"
+            rows={9}
+            value={observation}
+            onChange={onChange}
+            required
+          />
+        </FormControl>
 
-      <div className="info__actions info__item--full">
-        <Button onClick={onCheckIn}>Guardar</Button>
-      </div>
+        <div className="info__actions">
+          <Button type="submit">Guardar</Button>
+        </div>
+      </form>
 
       <div className="info__notes info__item--full">
         {notes.map((n) => (

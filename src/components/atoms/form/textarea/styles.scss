@@ -1,0 +1,10 @@
+@import '@/styles/variables.scss';
+
+.textarea {
+  border-radius: 8px;
+  border-color: $color-neutral-dark-2;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+  padding: 5px 7px;
+}

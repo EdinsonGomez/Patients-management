@@ -1,3 +1,5 @@
+import './styles.scss';
+
 function Textarea({
   id,
   className,
@@ -5,6 +7,7 @@ function Textarea({
   value,
   onChange,
   rows,
+  required,
 }) {
   return (
     <textarea
@@ -14,6 +17,7 @@ function Textarea({
       value={value}
       onChange={onChange}
       rows={rows}
+      required={required}
     />
   )
 }
