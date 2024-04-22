@@ -1,0 +1,30 @@
+@import "@/styles/variables.scss";
+
+.status-cell {
+  min-width: 120px;
+  display: block;
+  padding: 6px 0;
+  border-radius: 8px;
+  color: $color-neutral-dark-2;
+  border: 1px solid $color-neutral-light-3;
+  background-color: $color-neutral-light-3;
+
+
+  &--stable {
+    background-color: $color-green-5;
+    border-color: $color-green-5;
+    color: $color-green-2;
+  }
+
+  &--moderate {
+    background-color: $color-orange-5;
+    border-color: $color-orange-5;
+    color: $color-orange-2;
+  }
+
+  &--critical {
+    background-color: $color-red-5;
+    border-color: $color-red-5;
+    color: $color-red-3;
+  }
+}

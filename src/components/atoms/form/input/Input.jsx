@@ -1,5 +1,4 @@
-import classNames from "classnames";
-import { useMemo } from "react";
+import './styles.scss';
 
 function Input({
   className,
@@ -8,13 +7,9 @@ function Input({
   placeholder = '',
   onChange,
 }) {
-  const classProps = useMemo(() => (
-    classNames(className)
-  ), [className]);
-
   return (
     <input
-      className={classProps}
+      className={`input ${className ?? ''}`}
       id={id}
       placeholder={placeholder}
       value={value}

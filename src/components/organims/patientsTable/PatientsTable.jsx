@@ -1,4 +1,4 @@
-import BodyCell from "@/components/molecules/table/BodyCell";
+import BodyCell from "@/components/molecules/table/bodyCell/BodyCell";
 import "./styles.scss";
 import { useSelector } from "react-redux";
 

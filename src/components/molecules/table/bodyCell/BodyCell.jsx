@@ -1,7 +1,8 @@
 import DateCell from "@/components/atoms/table/DateCell";
 import LinkCell from "@/components/atoms/table/LinkCell";
-import StatusCell from "@/components/atoms/table/StatusCell";
+import StatusCell from "@/components/atoms/table/statusCell/StatusCell";
 import TextCell from "@/components/atoms/table/TextCell";
+import './styles.scss';
 
 function BodyCell({
   className = "",
@@ -24,7 +25,7 @@ function BodyCell({
       )}
 
       {type === "link" && (
-        <LinkCell href={href}>
+        <LinkCell href={href} className="body-cell--link">
           {children}
         </LinkCell>
       )}

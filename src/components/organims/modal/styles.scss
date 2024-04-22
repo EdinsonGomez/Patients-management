@@ -27,6 +27,7 @@
     display: flex;
     column-gap: 10px;
     padding: 8px 0;
+    margin: 24px 10px 0 10px;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -42,7 +43,7 @@
   &__close-icon {
     position: absolute;
     right: 0;
-    top: -2px;
+    top: -10px;
     cursor: pointer;
     align-self: flex-start;
 

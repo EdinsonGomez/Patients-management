@@ -2,11 +2,12 @@ import { useState, useEffect } from 'react';
 import HomeTemplate from '@/components/template/Home';
 import PatientsTable from '@/components/organims/patientsTable/PatientsTable';
 import Modal from '@/components/organims/modal/Modal';
-import PatientInfo from '../organims/patientInfo/PatientInfo';
+import PatientInfo from '../../organims/patientInfo/PatientInfo';
 import { useDispatch } from 'react-redux';
 import { fetchPatientsList } from '@/store/patientsListSlice';
 import { fetchPatientById } from '@/store/patientSlice';
 import { fetchUserById } from '@/store/userSlice';
+import './styles.scss';
 
 function Home() {
   const dispatch = useDispatch();
@@ -26,7 +27,10 @@ function Home() {
 
   return (
     <HomeTemplate>
-      <PatientsTable onClickRow={onClickRow} />
+      <div className='home'>
+        <h3 className='home__title'>Directorio de pacientes</h3>
+        <PatientsTable onClickRow={onClickRow} />
+      </div>
       <Modal
         open={openModal}
         onClose={() => setOpenModal(false)}

@@ -1,0 +1,14 @@
+@import '@/styles/variables.scss';
+
+.home {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.8px;
+    color: $color-primary-darker;
+  }
+}
