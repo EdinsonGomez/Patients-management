@@ -1,33 +1,39 @@
 import { useState, useEffect } from 'react';
 import HomeTemplate from '@/components/template/Home';
 import PatientsTable from '@/components/organims/patientsTable/PatientsTable';
-import { getPatientsList } from '@/services/patients';
 import Modal from '@/components/organims/modal/Modal';
+import PatientInfo from '../organims/patientInfo/PatientInfo';
+import { useDispatch } from 'react-redux';
+import { fetchPatientsList } from '@/store/patientsListSlice';
+import { fetchPatientById } from '@/store/patientSlice';
+import { fetchUserById } from '@/store/userSlice';
 
 function Home() {
-  const [list, setList] = useState([]);
+  const dispatch = useDispatch();
+
   const [openModal, setOpenModal] = useState(false);
 
+  const onClickRow = (item) => {
+    dispatch(fetchPatientById(item.id));
+    setOpenModal(true);
+  }
+
   useEffect(() => {
-    getPatientsList()
-      .then((res) => {
-        setList(res);
-      })
+    dispatch(fetchPatientsList());
+    dispatch(fetchUserById(1));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
     <HomeTemplate>
-      <PatientsTable data={list} />
+      <PatientsTable onClickRow={onClickRow} />
       <Modal
         open={openModal}
         onClose={() => setOpenModal(false)}
         title='Información Paciente'
       >
-        <div>
-          Este es un modal
-        </div>
+        <PatientInfo />
       </Modal>
-      <button onClick={() => setOpenModal(true)}>Abrir modal</button>
     </HomeTemplate>
   )
 }

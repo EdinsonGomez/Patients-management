@@ -1,0 +1,55 @@
+@import '@/styles/variables.scss';
+
+.table {
+  max-height: 60vh;
+  overflow-y: auto;
+  border: 1px solid rgb(0, 0, 0, 0.25);
+  border-radius: 8px;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    background-color: #e5e5e5;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #737373;
+    border-radius: 12px;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__thead {
+    background-color: $color-primary-darker;
+    color: $color-neutral-white;
+    position: sticky;
+    top: 0;
+  }
+
+  &__row-body {
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:nth-child(odd) {
+      background-color: $color-neutral-white;
+    }
+
+    &:nth-child(even) {
+      background-color: $color-neutral-light-3;
+      border-top: 1px solid $color-neutral-dark-3;
+      border-bottom: 1px solid $color-neutral-dark-3;
+    }
+  }
+
+  &__head-cell {
+    padding: 24px 8px;
+    text-align: center;
+  }
+
+  &__body-cell {
+    padding: 33.5px 8px;
+    text-align: center;
+  }
+}

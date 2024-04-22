@@ -5,7 +5,7 @@ function Input({
   className,
   id,
   value,
-  placeholder,
+  placeholder = '',
   onChange,
 }) {
   const classProps = useMemo(() => (

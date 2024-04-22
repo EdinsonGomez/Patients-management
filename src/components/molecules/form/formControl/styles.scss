@@ -1,0 +1,50 @@
+@import '@/styles/variables.scss';
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  row-gap: 4px;
+
+  &__label {
+    color: $color-primary-darker;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  &__edit-icon {
+    margin-left: 8px;
+    color: $color-green-2;
+    font-size: 19px;
+    cursor: pointer;
+  }
+
+  &__text {
+    color: $color-neutral-dark-2;
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  &--edit {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+  }
+
+  &__edit-action {
+    font-size: 20px;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+    
+    &--confirm {
+      color: $color-green-2;
+    }
+
+    &--cancel {
+      color: $color-red-3;
+    }
+  }
+}

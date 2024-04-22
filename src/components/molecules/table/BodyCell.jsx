@@ -12,19 +12,19 @@ function BodyCell({
   children,
 }) {
   return (
-    <td>
-      {type === "text" && <TextCell className={className}>{children}</TextCell>}
+    <td className={className}>
+      {type === "text" && <TextCell>{children}</TextCell>}
 
-      {type === "date" && <DateCell className={className} value={value} />}
+      {type === "date" && <DateCell value={value} />}
 
       {type === "status" && (
-        <StatusCell className={className} variant={variant}>
+        <StatusCell variant={variant}>
           {children}
         </StatusCell>
       )}
 
       {type === "link" && (
-        <LinkCell className={className} href={href}>
+        <LinkCell href={href}>
           {children}
         </LinkCell>
       )}

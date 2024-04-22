@@ -18,17 +18,19 @@ function Modal({
         )}
         onClick={() => onClose()}
       >
-        <div className="modal__container" onClick={(e) => e.stopPropagation()}>
-          <div className="modal__header">
-            <p className="modal__title">{title}</p>
-            <span className='modal__close-icon' onClick={onClose}>
-              <FontAwesomeIcon icon={faXmark} />
-            </span>
+        {open && (
+          <div className="modal__container" onClick={(e) => e.stopPropagation()}>
+            <div className="modal__header">
+              <p className="modal__title">{title}</p>
+              <span className='modal__close-icon' onClick={onClose}>
+                <FontAwesomeIcon icon={faXmark} size="lg" />
+              </span>
+            </div>
+            <div className="modal__content">
+              {children}
+            </div>
           </div>
-          <div className="modal__content">
-            {children}
-          </div>
-        </div>
+        )}
       </div>
     </>
   )

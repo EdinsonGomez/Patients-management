@@ -1,6 +1,8 @@
+import './style.scss';
+
 function Home({ children }) {
   return (
-    <div>
+    <div className="template-home">
       {children}
     </div>
   )
