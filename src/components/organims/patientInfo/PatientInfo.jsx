@@ -1,16 +1,15 @@
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import moment from "moment";
-import { updatePatient } from "@/services/patients";
-import { fetchPatientById } from "@/store/patientSlice";
 import FormEditableControl from "@/components/molecules/form/formControl/FormEditableControl";
 import FormControl from "@/components/molecules/form/formControl/FormControl";
 import Textarea from "@/components/atoms/form/textarea/Textarea";
 import Button from "@/components/atoms/button/Button";
-import './styles.scss';
 import Note from "@/components/molecules/note/Note";
-import { createNewAppointment } from "@/services/appointments";
+import { updatePatient } from "@/services/patients";
+import { createNewAppointment, deleteAppointment } from "@/services/appointments";
+import { fetchPatientById } from "@/store/patientSlice";
 import { fetchPatientsList } from "@/store/patientsListSlice";
+import './styles.scss';
 
 const viewConfig = [
   { key: 'name', label: 'Paciente', classNames: 'info__item--full' },
@@ -25,7 +24,7 @@ const viewConfig = [
 ]
 
 const appointments_types = {
-  "medicina_general": "Consulta por medicina general",
+  "medicina_general": "Consulta por Medicina General",
   "psiquiatría": "Consulta por Psiquiatría",
   "psicología": "Consulta por Psicología",
 }
@@ -52,7 +51,6 @@ function PatientInfo() {
       appointment_type,
       observation,
       patient_id: data.id,
-      last_attention: moment.utc().toISOString(),
       doctor_id: userData.id,
     }
 
@@ -85,11 +83,27 @@ function PatientInfo() {
 
     updatePatient(data.id, updatedData)
       .then(() => {
-        dispatch(fetchPatientById(data.id))
+        dispatch(fetchPatientById(data.id));
+        dispatch(fetchPatientsList());
       })
       .catch((error) => {
         console.error("Error update patient: ", error);
       });
+  }
+
+  const onDeleteNote = (appointmentId) => {
+    deleteAppointment(appointmentId)
+      .then((res) => {
+        console.log('delete res: ', res);
+
+        const updatedNotes = notes.filter(({ id }) => id !== appointmentId);
+        
+        setNotes(updatedNotes);
+        dispatch(fetchPatientsList());
+      })
+      .catch((error) => {
+        console.error("Delete appointment error: ", error);
+      })
   }
 
   return (
@@ -130,6 +144,7 @@ function PatientInfo() {
           <Note
             key={n.id}
             data={n}
+            onClickDelete={() => onDeleteNote(n.id)}
           />
         ))}
       </div>

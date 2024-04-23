@@ -1,12 +1,11 @@
-import appointmentsDB from '@/api/appointments.json';
+import axios from './api';
 
 export const createNewAppointment = async (body) => {
-  const id = appointmentsDB[appointmentsDB.length - 1].id + 1;
+  return axios.post('/appointments/create', body)
+    .then((res) => res.data);
+}
 
-  appointmentsDB.push({
-    ...body,
-    id,
-  });
-
-  return appointmentsDB[appointmentsDB.length - 1];
+export const deleteAppointment = async (appointmentId) => {
+  return axios.delete(`/appointments/${appointmentId}`)
+    .then((res) => res.data);
 }

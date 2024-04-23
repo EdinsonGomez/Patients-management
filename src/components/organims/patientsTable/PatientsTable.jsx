@@ -5,10 +5,10 @@ import { useSelector } from "react-redux";
 const columns = [
   { key: "id", head: "ID", type: "text" },
   { key: "name", head: "Paciente", type: "link", href: "#" },
-  { key: "identification", head: "Identificación", type: "text" },
-  { key: "phone", head: "Celular", type: "text" },
+  { key: "identification", head: "Identificación", type: "text", formatValue: (data) => `${data.identification_type}-${data.identification}` },
+  { key: "mobile", head: "Celular", type: "text" },
   { key: "eps", head: "Entidad", type: "text" },
-  { key: "last_attention", head: "Ultima Atención", type: "date" },
+  { key: "attention_date", head: "Ultima Atención", type: "date" },
   { key: "appointment_type", head: "Tipo de Atención", type: "text" },
   { key: "status", head: "Estado", type: "status" },
 ];
@@ -45,7 +45,7 @@ function PatientsTable({ onClickRow }) {
                     href={c.key === "link" ? c.href : ""}
                     value={item[c.key]}
                   >
-                    {item[c.key]}
+                    {c?.formatValue ? c.formatValue(item) : item[c.key]}
                   </BodyCell>
                 ))}
               </tr>

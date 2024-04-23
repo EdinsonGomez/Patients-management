@@ -1,9 +1,6 @@
-import usersDB from '@/api/users.json';
+import axios from './api';
 
-export const getUserById = async (userId) => {
-  const userIdx = usersDB.findIndex(({ id }) => id === userId);
-
-  if (userIdx === -1) return usersDB[0];
-
-  return usersDB[userIdx];
+export const getUserById = (userId) => {
+  return axios.get(`/auth/${userId}`)
+    .then((res) => res.data);
 }

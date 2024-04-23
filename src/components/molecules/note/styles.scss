@@ -24,6 +24,10 @@
 
   &__remove-icon {
     color: $color-red-3;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   &__observation {
