@@ -5,6 +5,18 @@
     "dev": {
       "cache": false,
       "persistent": true
+    },
+    "dev:api": {
+      "cache": false,
+      "persistent": true
+    },
+    "test": {
+      "cache": false,
+      "persistent": true
+    },
+    "start": {
+      "cache": false,
+      "persistent": true
     }
   }
 }

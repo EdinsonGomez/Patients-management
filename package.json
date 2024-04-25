@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "turbo dev"
+    "dev": "turbo dev",
+    "dev:api": "turbo dev --filter={./apps/api}",
+    "reto:test": "turbo run test --filter={./apps/reto}",
+    "reto:start": "turbo run start --filter={./apps/reto}"
   },
   "keywords": [],
   "author": "",

@@ -1,0 +1,20 @@
+{
+  "name": "inui-fullstack-developer-test",
+  "version": "1.0.0",
+  "description": "A basic fullstack development test",
+  "main": "algorithm_tests.test.js",
+  "scripts": {
+    "start": "node algorithm.js",
+    "test": "mocha algorithm_test.test.js"
+  },
+  "type": "module",
+  "author": "Tomas Venegas",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^5.1.0",
+    "mocha": "^10.4.0"
+  },
+  "volta":{
+    "node":"20.0.0"
+  }
+}
